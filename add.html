@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expenso – Add Expense</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <span class="logo">Expenso</span>
+    <div class="nav-links">
+      <a href="expenses.html">Expenses</a>
+      <a href="add.html" class="active">Add</a>
+      <a href="budget.html">Budget</a>
+      <a href="reports.html">Reports</a>
+      <a href="#" id="logout-link">Logout</a>
+    </div>
+  </nav>
+  <div class="container">
+    <h2>Add Expense</h2>
+    <div class="card">
+      <h3 style="margin-top:0">Create a New Expense</h3>
+      <form id="add-form">
+        <input type="text" id="expense-name" placeholder="Expense name" required>
+        <input type="number" id="expense-amount" placeholder="Amount ($)" step="0.01" required>
+        <select id="expense-category"></select>
+          <select id="subcategory" required>
+        <option value="">Select subcategory</option>
+      </select>
+
+        <input type="date" id="expense-date" required>
+        <button type="submit" class="btn-primary">Add Expense</button>
+      </form>
+      <div id="add-msg" class="info-msg"></div>
+    </div>
+  </div>
+  <script src="js/utils.js"></script>
+  <script src="js/add.js"></script>
+</body>
+</html>

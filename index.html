@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expenso – Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="gradient-bg">
+  <div class="auth-container">
+    <div class="auth-card">
+      <h1 class="app-title">Expenso</h1>
+      <p class="tagline">Manage your finances effortlessly</p>
+      <h2>Login</h2>
+      <form id="login-form">
+        <input type="email" id="login-email" placeholder="Email" required>
+        <input type="password" id="login-password" placeholder="Password" required>
+        <button type="submit" class="btn-primary">Login</button>
+      </form>
+      <p class="switch-msg">Don't have an account? <a href="signup.html">Sign up</a></p>
+      <p class="switch-msg"><a href="forgot.html">Forgot Password?</a></p>
+      <div id="login-error" class="error-msg"></div>
+    </div>
+  </div>
+  <script src="js/utils.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

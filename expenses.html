@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expenso – Expenses</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <span class="logo">Expenso</span>
+    <div class="nav-links">
+      <a href="expenses.html" class="active">Expenses</a>
+      <a href="add.html">Add</a>
+      <a href="budget.html">Budget</a>
+      <a href="reports.html">Reports</a>
+      <a href="#" id="logout-link">Logout</a>
+    </div>
+  </nav>
+  <div class="container">
+    <!-- Header with title (button removed per user feedback) -->
+    <div class="expenses-header">
+      <h2>Your Expenses</h2>
+    </div>
+    <!-- Quote of the day -->
+    <div id="quote" class="quote-card"></div>
+    <!-- Summary overview displayed above the list -->
+    <div id="expense-summary" class="card" style="display:none;"></div>
+    <!-- List of expense cards -->
+    <div id="expenses-list" class="card"></div>
+    <!-- Empty state: shown when no expenses exist -->
+    <div id="expenses-empty" class="card empty-state" style="display:none; text-align:center;">
+      <p>No expenses recorded yet.</p>
+      <!-- We keep the inline button as fallback for first time users -->
+      <button id="add-first-btn" class="btn-primary" style="max-width:220px; margin: 10px auto;">Add your first expense</button>
+    </div>
+  </div>
+  <script src="js/utils.js"></script>
+  <script src="js/expenses.js"></script>
+</body>
+</html>

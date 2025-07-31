@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expenso – Budget</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <span class="logo">Expenso</span>
+    <div class="nav-links">
+      <a href="expenses.html">Expenses</a>
+      <a href="add.html">Add</a>
+      <a href="budget.html" class="active">Budget</a>
+      <a href="reports.html">Reports</a>
+      <a href="#" id="logout-link">Logout</a>
+    </div>
+  </nav>
+  <div class="container">
+    <h2>Budget</h2>
+    <!-- Form card -->
+    <div class="card">
+      <h3 style="margin-top:0">Set Monthly Budget</h3>
+      <form id="budget-form">
+        <input type="number" id="budget-input" placeholder="Enter budget amount ($)" step="0.01" required>
+        <button type="submit" class="btn-primary">Save Budget</button>
+      </form>
+    </div>
+    <!-- Summary card will be populated by JS -->
+    <div id="budget-summary" class="card" style="display: none;"></div>
+  </div>
+  <script src="js/utils.js"></script>
+  <script src="js/budget.js"></script>
+</body>
+</html>

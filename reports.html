@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expenso – Reports</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <span class="logo">Expenso</span>
+    <div class="nav-links">
+      <a href="expenses.html">Expenses</a>
+      <a href="add.html">Add</a>
+      <a href="budget.html">Budget</a>
+      <a href="reports.html" class="active">Reports</a>
+      <a href="#" id="logout-link">Logout</a>
+    </div>
+  </nav>
+  <div class="container">
+    <h2>Reports</h2>
+    <div id="weekly-report" class="card">
+      <h3 style="margin-top:0">Weekly Report</h3>
+      <canvas id="weekly-chart" width="400" height="200"></canvas>
+      <table id="weekly-table" class="report-table"></table>
+    </div>
+    <div id="monthly-report" class="card">
+      <h3 style="margin-top:0">Monthly Report</h3>
+      <canvas id="monthly-chart" width="400" height="200"></canvas>
+      <table id="monthly-table" class="report-table"></table>
+    </div>
+    <div class="card" style="text-align:center;">
+      <button id="download-report" class="btn-primary" style="max-width:260px;">Download CSV</button>
+    </div>
+  </div>
+  <script src="js/utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/reports.js"></script>
+</body>
+</html>

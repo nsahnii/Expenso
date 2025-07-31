@@ -1,0 +1,393 @@
+/*
+  Expenso Style Sheet
+  --------------------
+  This style sheet defines a cohesive visual language for the Expenso web app.
+  It borrows inspiration from modern finance sites by using clean layouts,
+  subtle gradients and generous spacing. Colour variables are defined up front
+  for easy adjustments. Forms, buttons and cards are consistently styled
+  across authentication and application pages.
+*/
+
+/* Base colour palette */
+:root {
+  --primary-color: #5b86e5;
+  --secondary-color: #36d1dc;
+  --background-color: #f5f7fb;
+  --card-background: #ffffff;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --success-color: #10b981;
+  --error-color: #e02424;
+  --warning-color: #f59e0b;
+  --gradient-start: #6b73ff;
+  --gradient-end: #000dff;
+}
+
+/* Global styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-dark);
+  background-color: var(--background-color);
+  min-height: 100vh;
+}
+
+/* Gradient background for authentication pages */
+.gradient-bg {
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Authentication card container */
+.auth-container {
+  width: 100%;
+  max-width: 420px;
+}
+
+.auth-card {
+  background: var(--card-background);
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+.auth-card h1.app-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--primary-color);
+  font-size: 32px;
+}
+.tagline {
+  margin: 0;
+  font-size: 15px;
+  color: var(--text-light);
+  margin-bottom: 24px;
+}
+.auth-card h2 {
+  margin: 8px 0 24px;
+  font-weight: 500;
+  color: var(--text-dark);
+  font-size: 20px;
+}
+.auth-card form input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 15px;
+  background: #f9fafb;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+.auth-card form input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(91, 134, 229, 0.2);
+}
+
+/* Button styles */
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  width: 100%;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 28px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  box-sizing: border-box;
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 13, 255, 0.25);
+}
+.btn-primary:hover {
+  box-shadow: 0 6px 14px rgba(0, 13, 255, 0.35);
+  transform: translateY(-1px);
+}
+.btn-secondary {
+  background: #e5e7eb;
+  color: #374151;
+  margin-top: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+.btn-secondary:hover {
+  background: #d1d5db;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+  transform: translateY(-1px);
+}
+
+.switch-msg {
+  font-size: 13px;
+  margin-top: 12px;
+}
+.switch-msg a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+.switch-msg a:hover {
+  text-decoration: underline;
+}
+
+.error-msg {
+  color: var(--error-color);
+  margin-top: 10px;
+  font-size: 13px;
+}
+.info-msg {
+  color: var(--success-color);
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+/* Navigation bar */
+.navbar {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  padding: 16px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.navbar .logo {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.navbar .nav-links {
+  display: flex;
+  align-items: center;
+}
+.navbar .nav-links a {
+  margin-left: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.navbar .nav-links a:hover {
+  background: rgba(255,255,255,0.2);
+}
+.navbar .nav-links a.active {
+  background: rgba(255,255,255,0.3);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+/* Page container */
+.container {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Card component */
+.card {
+  background: var(--card-background);
+  padding: 24px 32px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-bottom: 24px;
+}
+
+/* Constrain form width inside cards */
+.card form {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* Form controls */
+.card input[type="text"],
+.card input[type="email"],
+.card input[type="password"],
+.card input[type="number"],
+.card input[type="date"],
+.card select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 15px;
+  background: #f9fafb;
+  transition: border-color 0.2s ease;
+  appearance: none;
+  box-sizing: border-box;
+}
+.card input:focus,
+.card select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(91, 134, 229, 0.2);
+}
+
+/* Custom arrow for select dropdowns */
+.card select {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width='12' height='12' viewBox='0 0 16 16' fill='%236b7280' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6l4 4 4-4' stroke='%236b7280' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 36px;
+}
+
+/* Expense list */
+#expenses-list .expense-card {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 16px;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+#expenses-list .expense-card:last-child {
+  border-bottom: none;
+}
+#expenses-list .expense-card .expense-info {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#expenses-list .expense-card .expense-info .category {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-left: 10px;
+  color: #fff;
+  white-space: nowrap;
+}
+#expenses-list .expense-card .expense-amount {
+  font-weight: 600;
+  font-size: 15px;
+  text-align: right;
+}
+#expenses-list .expense-card .expense-actions button {
+  min-width: 80px;
+  font-size: 13px;
+  padding: 8px 12px;
+}
+
+/* Report tables */
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+.report-table th,
+.report-table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #f3f4f6;
+  text-align: right;
+  font-size: 14px;
+}
+.report-table th:first-child,
+.report-table td:first-child {
+  text-align: left;
+}
+.report-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Budget progress bar */
+.budget-progress {
+  background: #e5e7eb;
+  height: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.budget-progress-bar {
+  height: 100%;
+  width: 0;
+  transition: width 0.4s ease;
+  border-radius: 6px;
+}
+
+/* Summary overview grid */
+.summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.summary .overview-item {
+  flex: 1;
+  min-width: 150px;
+  margin-bottom: 10px;
+}
+.summary .overview-item .label {
+  display: block;
+  font-size: 14px;
+  color: var(--text-light);
+  margin-bottom: 4px;
+}
+.summary .overview-item span {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--text-dark);
+}
+
+/* Quote card shown on the expenses page */
+.quote-card {
+  background: linear-gradient(135deg, #f3f4ff 0%, #e0e7ff 100%);
+  color: #4f46e5;
+  font-style: italic;
+  font-size: 18px;
+  padding: 20px 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* Expenses header containing title and add button */
+.expenses-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.expenses-header h2 {
+  margin: 0 0 12px;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+/* Removed explicit button styles in expenses-header as the button is no longer used */
+
+/* Empty state styling */
+.empty-state p {
+  margin: 0;
+  font-size: 16px;
+  color: var(--text-light);
+}
+.empty-state button {
+  margin-top: 16px;
+  width: auto;
+  display: inline-block;
+}
+
+/* Chart canvas sizing */
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Remove default focus outline for buttons */
+button:focus {
+  outline: none;
+}
